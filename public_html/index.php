@@ -1,4 +1,9 @@
-
+<?php
+include_once("./database/constants.php");
+if (isset($_SESSION["userid"])) {
+    header("location:".DOMAIN."/dashboard.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +19,7 @@
     <script type="text/javascript"  src="./js/main.js"></script>
 </head>
 <body>
-
+<div class="overlay"><div class="loader"></div></div>
 <!-- Navbar -->
 <?php include_once("./templates/header.php"); ?>
 <br/><br/>

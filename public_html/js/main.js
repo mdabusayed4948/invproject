@@ -142,6 +142,7 @@ $(document).ready(function () {
             method : "POST",
             data : {getCategory:1},
             success : function(data){
+               //alert(data);
                 var root = "<option value='0'>Root</option>";
                 var choose = "<option value=''>Choose Category</option>";
                 $("#parent_cat").html(root+data);
